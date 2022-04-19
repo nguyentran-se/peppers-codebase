@@ -1,0 +1,6 @@
+build/*
+public/*
+src/setupTests.js
+src/reportWebVitals.js
+node_modules
+.github

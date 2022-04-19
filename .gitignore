@@ -5,6 +5,13 @@
 /.pnp
 .pnp.js
 
+# peppers
+/setup.md
+
+#cache
+.eslintcache
+6
+
 # testing
 /coverage
 
