@@ -28,7 +28,7 @@
     "format": "prettier --check ./src",
     "format:fix": "prettier --write ./src",
     "lint": "eslint ./src",
-    "lint:fix": "eslint --fix src/**/*.{ts,tsx}",
+    "lint:fix": "eslint --fix ./src",
     "prepare": "husky install"
   },
   "eslintConfig": {
