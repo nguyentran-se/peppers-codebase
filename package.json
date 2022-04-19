@@ -28,18 +28,29 @@
     "format": "prettier --check ./src",
     "format:fix": "prettier --write ./src",
     "lint": "eslint ./src",
-    "lint:fix": "eslint --fix ./src",
+    "lint:fix": "eslint --fix src/**/*.{ts,tsx}",
     "prepare": "husky install"
   },
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"]
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "lint-staged": {
-    "*.{ts,tsx}": "eslint --cache --fix --color",
-    "*./src": "prettier --write"
+    "*.{scss,css,json,md,html}": "yarn format:fix",
+    "*.{ts,tsx}": [
+      "yarn lint:fix",
+      "yarn format:fix",
+      "git add ."
+    ]
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -47,7 +58,10 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
     "eslint": "^8.13.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.8",
     "prettier": "^2.6.2"
