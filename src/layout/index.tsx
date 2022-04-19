@@ -1,6 +1,5 @@
-import { PATH_NAMES } from "configs";
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from './Footer';
+import Header from './Header';
 interface PublicLayoutProps {
   children: React.ReactNode;
 }
