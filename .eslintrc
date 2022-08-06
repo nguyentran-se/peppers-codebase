@@ -1,5 +1,10 @@
 {
-  "extends": ["plugin:@typescript-eslint/recommended"],
+  "plugins": ["unused-imports", "jsx-a11y", "react-hooks", "@typescript-eslint"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
@@ -8,7 +13,6 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["unused-imports"],
   "rules": {
     "no-console": "off",
     "react/prop-types": "off",
@@ -22,6 +26,8 @@
         "args": "after-used",
         "argsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off"
   }
 }
