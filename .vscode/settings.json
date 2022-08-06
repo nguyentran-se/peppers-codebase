@@ -1,9 +1,9 @@
 {
   "files.exclude": {
-    ".husky": true,
-    "node_modules": true,
-    "bin": true,
-    ".github": true
+    ".husky": false,
+    "node_modules": false,
+    "bin": false,
+    ".github": false
   },
   "files.eol": "\n",
   "editor.tabSize": 2,
