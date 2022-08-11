@@ -3,7 +3,8 @@
 ##############
 
 # pull offical base image
-FROM node:14.15.4-alpine as build-stage
+FROM node:16.16.0-alpine as build-stage
+
 
 # set working dir
 WORKDIR /app
